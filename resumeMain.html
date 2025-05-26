@@ -3,52 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Udit Sharma Resume</title>
+  <title>Udit Sharma – Software Developer</title>
   <style>
-    @page {
-      size: A4;
-      margin: 20mm;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.5;
-      padding: 20px;
-      max-width: 794px;
-      margin: auto;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
     }
 
-    .resume {
+    .container {
+      max-width: 850px;
+      margin: 30px auto;
       background: #fff;
-      padding: 30px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     h1, h2, h3 {
+      margin: 0;
       color: #2c3e50;
-      margin-bottom: 10px;
     }
 
-    .header {
-      text-align: center;
-      margin-bottom: 30px;
+    h1 {
+      font-size: 32px;
     }
 
-    .contact, .skills, .education, .experience, .achievements {
-      margin-bottom: 25px;
-    }
-
-    .section-title {
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
-      margin-bottom: 10px;
       text-transform: uppercase;
-      font-size: 16px;
+    }
+
+    .subheading {
+      font-size: 18px;
+      color: #555;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    .section p, ul {
+      margin: 10px 0;
     }
 
     ul {
@@ -57,24 +55,12 @@
 
     .two-column {
       display: flex;
-      justify-content: space-between;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     .two-column > div {
-      width: 48%;
-    }
-
-    @media print {
-      body {
-        background: none;
-      }
-      .resume {
-        box-shadow: none;
-      }
-      .no-print {
-        display: none;
-      }
+      flex: 1 1 48%;
     }
 
     .print-button {
@@ -88,84 +74,101 @@
       color: white;
       border: none;
       cursor: pointer;
+      border-radius: 4px;
     }
 
     button:hover {
       background-color: #34495e;
     }
+
+    @media print {
+      .print-button {
+        display: none;
+      }
+      body {
+        background: white;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="print-button no-print">
+  <div class="print-button">
     <button onclick="window.print()">Print / Save as PDF</button>
   </div>
 
-  <div class="resume">
-    <div class="header">
+  <div class="container">
+    <div class="section header">
       <h1>Udit Sharma</h1>
-      <h3>Software Developer</h3>
+      <div class="subheading">Software Developer</div>
     </div>
 
-    <div class="contact">
-      <div class="section-title">Contact</div>
+    <div class="section contact">
+      <h2>Contact</h2>
       <p><strong>Phone:</strong> +91 81097 15561</p>
       <p><strong>Email:</strong> udit.dnsharma@gmail.com</p>
       <p><strong>Location:</strong> Nalkheda, Madhya Pradesh</p>
-      <p><strong>LinkedIn:</strong> www.linkedin.com/in/udit-sharma-6604ab121</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">linkedin.com/in/udit-sharma-6604ab121</a></p>
     </div>
 
-    <div class="skills">
-      <div class="section-title">Skills</div>
+    <div class="section profile">
+      <h2>Personal Profile</h2>
+      <p>Software Engineer with over two years of experience in designing, developing, testing, and maintaining robust web applications. Adept at solving complex technical challenges and delivering high-quality, scalable solutions. Passionate about utilizing technical expertise and problem-solving skills to drive innovation and contribute effectively within a dynamic software development team.</p>
+    </div>
+
+    <div class="section skills">
+      <h2>Skills</h2>
       <div class="two-column">
         <div>
-          <strong>Technologies:</strong><br/>
-          .NET Core, Web API, REST API, Entity Framework<br/>
-          ASP.NET, ADO.NET, SQL Server<br/>
-          Visual Studio, C#, C++, JavaScript<br/>
-          Bootstrap5, HTML, CSS
+          <p><strong>Technologies:</strong><br>
+          .NET Core, Web API, REST API, Entity Framework<br>
+          ASP.NET, ADO.NET, SQL Server</p>
+          <p><strong>Tools:</strong><br>
+          Visual Studio, IIS Deployment</p>
         </div>
         <div>
-          <strong>Design & Tools:</strong><br/>
-          Design Patterns (Singleton & Factory)<br/>
-          IIS Deployment<br/><br/>
-          <strong>Languages:</strong><br/>
-          English, Hindi
+          <p><strong>Languages:</strong><br>
+          C#, C++, JavaScript, Bootstrap5, HTML, CSS</p>
+          <p><strong>Design:</strong><br>
+          Design Patterns (Singleton, Factory)</p>
+          <p><strong>Communication:</strong><br>
+          English, Hindi</p>
         </div>
       </div>
     </div>
 
-    <div class="experience">
-      <div class="section-title">Work Experience</div>
+    <div class="section experience">
+      <h2>Work Experience</h2>
       <p><strong>Software Developer</strong> – Atyati Technologies, Bangalore (July 2023 – Present)</p>
       <ul>
-        <li>Engineered .NET Core apps to optimize MFI loan services for IDBI Bank.</li>
-        <li>Developed & consumed Web APIs for data integration.</li>
-        <li>Handled API-driven CCR reports & secure JWT-based authentication.</li>
-        <li>Implemented factory pattern and encryption methodologies.</li>
-        <li>Used EF Core, ASP.NET Core, SQL Server, MVC, JS, HTML/CSS.</li>
-        <li>Deployed applications on IIS.</li>
+        <li>Engineered .NET Core applications to optimize MFI loan services for IDBI Bank.</li>
+        <li>Developed and consumed Web APIs for seamless data integration.</li>
+        <li>Handled API-driven CCR reports and JWT-based authentication.</li>
+        <li>Applied factory pattern and encryption for secure, scalable systems.</li>
+        <li>Used Entity Framework, ASP.NET Core, MVC, C#, JavaScript, SQL Server, HTML/CSS.</li>
+        <li>Deployed solutions via IIS for production use.</li>
       </ul>
+
       <p><strong>Intern (Software Development)</strong> – Atyati Technologies, Bangalore (Jan 2023 – June 2023)</p>
       <ul>
-        <li>Implemented middleware in ASP.NET Core.</li>
-        <li>Gained experience in RESTful APIs, dependency injection, SQL transaction management.</li>
+        <li>Developed middleware in ASP.NET Core for exception handling and request validation.</li>
+        <li>Gained exposure to RESTful API design, SQL transaction management, and dependency injection.</li>
       </ul>
     </div>
 
-    <div class="education">
-      <div class="section-title">Education</div>
+    <div class="section education">
+      <h2>Education</h2>
       <ul>
-        <li><strong>MCA</strong> – NIT Patna, Bihar (2021–2023) – 7.64 CGPA</li>
+        <li><strong>MCA</strong> – NIT Patna (2021–2023) – 7.64 CGPA</li>
         <li><strong>B.Sc. (Computer Science)</strong> – Christian Eminent College, Indore (2017–2020) – 72.97%</li>
-        <li><strong>Diploma</strong> – Kamla Sagar Higher School (2016–2017) – 79.40%</li>
+        <li><strong>Diploma</strong> – Kamla Sagar Higher Secondary School (2016–2017) – 79.40%</li>
       </ul>
     </div>
 
-    <div class="achievements">
-      <div class="section-title">Achievements</div>
+    <div class="section achievements">
+      <h2>Achievements</h2>
       <ul>
-        <li>Rising Star Performer Award at Atyati (Q4 2023-2024)</li>
-        <li>All India Rank 662 in NIMCET Entrance Exam 2021</li>
+        <li>Rising Star Performer Award at Atyati (Q4 2023-24)</li>
+        <li>Secured AIR 662 in NIMCET Entrance Exam 2021</li>
       </ul>
     </div>
   </div>
