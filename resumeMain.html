@@ -1,176 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Udit Sharma – Software Developer</title>
+  <meta charset="UTF-8">
+  <title>Will You Be Mine?</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #2c3e50;
       margin: 0;
       padding: 0;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .container {
-      max-width: 850px;
-      margin: 30px auto;
+    .proposal-box {
       background: #fff;
       padding: 40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1, h2, h3 {
-      margin: 0;
-      color: #2c3e50;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 350px;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 24px;
+      color: #e91e63;
     }
 
-    h2 {
-      font-size: 20px;
-      margin-top: 30px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-      text-transform: uppercase;
-    }
-
-    .subheading {
+    p {
       font-size: 18px;
       color: #555;
-      margin-top: 5px;
-      margin-bottom: 20px;
-    }
-
-    .section p, ul {
-      margin: 10px 0;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .two-column {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .two-column > div {
-      flex: 1 1 48%;
-    }
-
-    .print-button {
-      text-align: center;
       margin: 20px 0;
+    }
+
+    .buttons {
+      margin-top: 20px;
     }
 
     button {
       padding: 10px 20px;
-      background-color: #2c3e50;
-      color: white;
+      margin: 10px;
       border: none;
+      border-radius: 30px;
+      font-size: 16px;
       cursor: pointer;
-      border-radius: 4px;
+      transition: all 0.3s ease;
     }
 
-    button:hover {
-      background-color: #34495e;
+    .yes {
+      background-color: #4CAF50;
+      color: white;
     }
 
-    @media print {
-      .print-button {
-        display: none;
-      }
-      body {
-        background: white;
-      }
+    .no {
+      background-color: #f44336;
+      color: white;
+      position: relative;
+    }
+
+    .message {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #4CAF50;
     }
   </style>
 </head>
 <body>
-  <div class="print-button">
-    <button onclick="window.print()">Print / Save as PDF</button>
+  <div class="proposal-box">
+    <h1>Will You Be Mine? 💖</h1>
+    <p>I promise to make you smile every day! 😊</p>
+    <div class="buttons">
+      <button class="yes" onclick="showMessage()">Yes 💘</button>
+      <button class="no" onmouseover="moveNoButton()">No 😅</button>
+    </div>
+    <div class="message" id="message">Yay! I knew you'd say Yes! 💍💕</div>
   </div>
 
-  <div class="container">
-    <div class="section header">
-      <h1>Udit Sharma</h1>
-      <div class="subheading">Software Developer</div>
-    </div>
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
 
-    <div class="section contact">
-      <h2>Contact</h2>
-      <p><strong>Phone:</strong> +91 81097 15561</p>
-      <p><strong>Email:</strong> udit.dnsharma@gmail.com</p>
-      <p><strong>Location:</strong> Nalkheda, Madhya Pradesh</p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">linkedin.com/in/udit-sharma-6604ab121</a></p>
-    </div>
-
-    <div class="section profile">
-      <h2>Personal Profile</h2>
-      <p>Software Engineer with over two years of experience in designing, developing, testing, and maintaining robust web applications. Adept at solving complex technical challenges and delivering high-quality, scalable solutions. Passionate about utilizing technical expertise and problem-solving skills to drive innovation and contribute effectively within a dynamic software development team.</p>
-    </div>
-
-    <div class="section skills">
-      <h2>Skills</h2>
-      <div class="two-column">
-        <div>
-          <p><strong>Technologies:</strong><br>
-          .NET Core, Web API, REST API, Entity Framework<br>
-          ASP.NET, ADO.NET, SQL Server</p>
-          <p><strong>Tools:</strong><br>
-          Visual Studio, IIS Deployment</p>
-        </div>
-        <div>
-          <p><strong>Languages:</strong><br>
-          C#, C++, JavaScript, Bootstrap5, HTML, CSS</p>
-          <p><strong>Design:</strong><br>
-          Design Patterns (Singleton, Factory)</p>
-          <p><strong>Communication:</strong><br>
-          English, Hindi</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section experience">
-      <h2>Work Experience</h2>
-      <p><strong>Software Developer</strong> – Atyati Technologies, Bangalore (July 2023 – Present)</p>
-      <ul>
-        <li>Engineered .NET Core applications to optimize MFI loan services for IDBI Bank.</li>
-        <li>Developed and consumed Web APIs for seamless data integration.</li>
-        <li>Handled API-driven CCR reports and JWT-based authentication.</li>
-        <li>Applied factory pattern and encryption for secure, scalable systems.</li>
-        <li>Used Entity Framework, ASP.NET Core, MVC, C#, JavaScript, SQL Server, HTML/CSS.</li>
-        <li>Deployed solutions via IIS for production use.</li>
-      </ul>
-
-      <p><strong>Intern (Software Development)</strong> – Atyati Technologies, Bangalore (Jan 2023 – June 2023)</p>
-      <ul>
-        <li>Developed middleware in ASP.NET Core for exception handling and request validation.</li>
-        <li>Gained exposure to RESTful API design, SQL transaction management, and dependency injection.</li>
-      </ul>
-    </div>
-
-    <div class="section education">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>MCA</strong> – NIT Patna (2021–2023) – 7.64 CGPA</li>
-        <li><strong>B.Sc. (Computer Science)</strong> – Christian Eminent College, Indore (2017–2020) – 72.97%</li>
-        <li><strong>Diploma</strong> – Kamla Sagar Higher Secondary School (2016–2017) – 79.40%</li>
-      </ul>
-    </div>
-
-    <div class="section achievements">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Rising Star Performer Award at Atyati (Q4 2023-24)</li>
-        <li>Secured AIR 662 in NIMCET Entrance Exam 2021</li>
-      </ul>
-    </div>
-  </div>
+    function moveNoButton() {
+      const noButton = document.querySelector(".no");
+      const offsetX = Math.random() * 200 - 100;
+      const offsetY = Math.random() * 200 - 100;
+      noButton.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    }
+  </script>
 </body>
 </html>
