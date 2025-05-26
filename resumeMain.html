@@ -17,6 +17,7 @@
       margin: auto;
       padding: 20px;
       background-color: #fff;
+      position: relative;
     }
     h1, h2, h3 {
       color: #2c3e50;
@@ -30,10 +31,6 @@
     }
     .section p {
       margin: 4px 0;
-    }
-    .contact-info a {
-      color: #2980b9;
-      text-decoration: none;
     }
     .skills-grid {
       display: grid;
@@ -53,89 +50,131 @@
     .achievement {
       margin-bottom: 5px;
     }
+    .contact-info a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .profile-pic {
+      position: absolute;
+    top: 80px;
+    right: 86px;
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    object-fit: fit;
+    border: 3px solid #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <img src="DSC_0582.JPG" alt="Profile Picture" class="profile-pic" />
     <h1>Udit Sharma</h1>
     <p><strong>Software Developer</strong></p>
 
-    <div class="section">
+    <div class="section contact-info">
       <h2>Contact</h2>
-      <div class="contact-info">
-        <p><strong>Phone:</strong> +91 81097 15561</p>
-        <p><strong>Email:</strong> udit.dnsharma@gmail.com</p>
-        <p><strong>Location:</strong> Nalkheda, Madhya Pradesh</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">udit-sharma</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/sharmaji99" target="_blank">sharmaji99</a></p>
-      </div>
+      <p>📞 +91 81097 15561</p>
+      <p>📧 <a href="mailto:udit.dnsharma@gmail.com">udit.dnsharma@gmail.com</a></p>
+      <p>📍 Nalkheda, Madhya Pradesh</p>
+      <p>🔗 <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">LinkedIn Profile</a></p>
+      <p>💻 <a href="https://github.com/sharmaji99" target="_blank">GitHub: sharmaji99</a></p>
     </div>
 
     <div class="section">
       <h2>Personal Profile</h2>
-      <p>Software Engineer with over two years of experience in designing, developing, testing, and maintaining robust web applications. Adept at solving complex technical challenges and delivering high-quality, scalable solutions. Passionate about utilizing my technical expertise and problem-solving skills to drive innovation and contribute effectively within a dynamic software development team.</p>
+      <p>
+        Software Engineer with over two years of experience in designing, developing, testing, and maintaining robust web applications.
+        Adept at solving complex technical challenges and delivering high-quality, scalable solutions. Passionate about utilizing my technical
+        expertise and problem-solving skills to drive innovation and contribute effectively within a dynamic software development team.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Work Experience</h2>
+      <p class="job-title">Software Developer | Atyati Technologies, Bangalore <br> (July 2023 - Present)</p>
+      <ul>
+        <li>Engineered .NET Core applications to optimize MFI loan services for IDBI Bank.</li>
+        <li>Developed and consumed Web APIs for seamless data integration.</li>
+        <li>Handled API-driven CCR report retrieval for streamlined data processing.</li>
+        <li>Implemented Factory Pattern to improve maintainability and scalability.</li>
+        <li>Integrated JWT-based authentication for API security.</li>
+        <li>Used advanced encryption to safeguard sensitive data.</li>
+        <li>Worked with Entity Framework Core, ASP.NET Core, SQL Server, MVC, JavaScript, HTML, CSS.</li>
+        <li>Deployed applications on IIS ensuring reliable service delivery.</li>
+      </ul>
+
+      <p class="job-title">Intern (Software Development) | Atyati Technologies, Bangalore <br> (Jan 2023 - June 2023)</p>
+      <ul>
+        <li>Learned to implement middleware for logging, error handling, and validation.</li>
+        <li>Built RESTful APIs following industry best practices.</li>
+        <li>Understood connection pooling and transaction management in MS SQL Server.</li>
+        <li>Applied Dependency Injection for better modularity in .NET Core apps.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <p class="institution">Master of Computer Application</p>
+      <p>National Institute of Technology, Patna (2021 - 2023) — 7.64 CGPA</p>
+
+      <p class="institution">B.Sc. in Computer Science</p>
+      <p>Christian Eminent College, Indore (2017 - 2020) — 72.97%</p>
+
+      <p class="institution">High School Diploma</p>
+      <p>Kamla Sagar Higher School, Bhainsoda (2016 - 2017) — 79.40%</p>
     </div>
 
     <div class="section">
       <h2>Skills</h2>
       <div class="skills-grid">
         <div>
-          <strong>Technologies and Skills</strong><br />
-          .NET Core, Web API, REST API, Entity Framework
+          <strong>Technologies:</strong>
+          <ul>
+            <li>.NET Core</li>
+            <li>Web API, REST API</li>
+            <li>Entity Framework</li>
+          </ul>
         </div>
         <div>
-          <strong>Frameworks and Tools</strong><br />
-          ASP.NET, ADO.NET, SQL Server, Visual Studio
+          <strong>Frameworks/Tools:</strong>
+          <ul>
+            <li>ASP.NET</li>
+            <li>ADO.NET</li>
+            <li>SQL Server</li>
+            <li>Visual Studio</li>
+          </ul>
         </div>
         <div>
-          <strong>Languages</strong><br />
-          C#, C++, JavaScript, Bootstrap5, HTML, CSS
+          <strong>Languages:</strong>
+          <ul>
+            <li>C#, C++</li>
+            <li>JavaScript</li>
+            <li>HTML, CSS, Bootstrap 5</li>
+          </ul>
         </div>
         <div>
-          <strong>Design & Deployment</strong><br />
-          Design Patterns (Singleton, Factory), IIS Deployment
-        </div>
-        <div>
-          <strong>Communication</strong><br />
-          English, Hindi
+          <strong>Design/Deployment:</strong>
+          <ul>
+            <li>Design Patterns (Singleton, Factory)</li>
+            <li>IIS Deployment</li>
+          </ul>
         </div>
       </div>
     </div>
 
     <div class="section">
-      <h2>Work Experience</h2>
-      <p class="job-title">Software Developer – Atyati Technologies, Bangalore (July 2023 - Current)</p>
-      <ul>
-        <li>Engineered .NET Core applications to optimize MFI loan services for IDBI Bank, ensuring efficient and scalable solutions.</li>
-        <li>Developed and consumed Web APIs for seamless data integration.</li>
-        <li>Handled API-driven CCR report retrieval, streamlining financial data processing.</li>
-        <li>Used factory pattern to enhance maintainability and scalability.</li>
-        <li>Integrated JWT authentication for secure API communication.</li>
-        <li>Implemented encryption for securing sensitive data.</li>
-        <li>Used Entity Framework Core, ASP.NET Core, SQL Server, MVC, C#, JavaScript, HTML, and CSS.</li>
-        <li>Deployed applications using IIS for reliable availability.</li>
-      </ul>
-
-      <p class="job-title">Intern (Software Development) – Atyati Technologies, Bangalore (Jan 2023 - June 2023)</p>
-      <ul>
-        <li>Implemented middleware in ASP.NET Core for logging, exception handling, and validation.</li>
-        <li>Understood RESTful API principles and design practices.</li>
-        <li>Learned connection pooling and transaction management in SQL Server.</li>
-        <li>Worked with dependency injection to improve modularity and maintainability.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <p><span class="institution">Master of Computer Application</span> – National Institute of Technology, Patna (2021–2023) – 7.64 CGPA</p>
-      <p><span class="institution">Bachelor of Science in Computer Science</span> – Christian Eminent College, Indore (2017–2020) – 72.97%</p>
-      <p><span class="institution">High School Diploma</span> – Kamla Sagar Higher School, Bhainsoda (2016–2017) – 79.40%</p>
+      <h2>Communication</h2>
+      <p>English, Hindi</p>
     </div>
 
     <div class="section">
       <h2>Achievements</h2>
-      <p class="achievement">🏆 Received the Rising Star Performer Award at Atyati Technologies in Q4 2023–2024.</p>
-      <p class="achievement">📈 Secured All India Rank 662 in NIMCET Entrance Exam 2021.</p>
+      <ul>
+        <li class="achievement">🏆 Rising Star Performer Award at Atyati Technologies (Q4 2023-2024).</li>
+        <li class="achievement">🏅 All India Rank 662 in NIMCET 2021.</li>
+      </ul>
     </div>
   </div>
 </body>
