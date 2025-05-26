@@ -5,73 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Udit Sharma - Resume</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fbfbfd;
+      background-color: #f5f7fa;
       color: #333;
     }
+
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background-color: #fff;
-      position: relative;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
+
     h1, h2, h3 {
       color: #2c3e50;
-      margin-bottom: 5px;
     }
+
     h1 {
-      font-size: 32px;
+      font-size: 36px;
+      margin-bottom: 10px;
     }
+
+    h2 {
+      font-size: 24px;
+      border-left: 6px solid #2c3e50;
+      padding-left: 10px;
+      background-color: #f0f3f5;
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
     .section {
-      margin-top: 30px;
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      background-color: #fafafa;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
     }
-    .section p {
-      margin: 4px 0;
-    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
+      gap: 15px;
     }
+
     ul {
       padding-left: 20px;
+      margin: 8px 0;
     }
+
     .job-title {
       font-weight: bold;
       margin-top: 10px;
     }
+
     .institution {
       font-weight: bold;
     }
+
+    .contact-info a {
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
     .achievement {
       margin-bottom: 5px;
     }
-    .contact-info a {
-      color: #2980b9;
-      text-decoration: none;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
     }
+
+    .header-info {
+      flex: 1;
+    }
+
     .profile-pic {
-      position: absolute;
-      top: 80px;
-      right: 86px;
-      width: 154px;
-      height: 154px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #2c3e50;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 4px solid #2c3e50;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      margin-left: 20px;
     }
+
     .print-btn-container {
       text-align: center;
-      margin: 30px 0;
+      margin-top: 40px;
     }
+
     .print-btn {
-      padding: 10px 20px;
+      padding: 10px 25px;
       background-color: #2c3e50;
       color: #fff;
       border: none;
@@ -79,6 +124,7 @@
       cursor: pointer;
       font-size: 16px;
     }
+
     .print-btn:hover {
       background-color: #34495e;
     }
@@ -88,34 +134,62 @@
         display: none;
       }
     }
+
+    @media screen and (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-pic {
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="DSC_0582.JPG" alt="Profile Picture" class="profile-pic" />
-    <h1>Udit Sharma</h1>
-    <p><strong>Software Developer</strong></p>
+    <div class="header">
+      <div class="header-info">
+        <h1>Udit Sharma</h1>
+        <p><strong>Software Developer</strong></p>
+      </div>
+      <img src="DSC_0582.JPG" alt="Profile Picture" class="profile-pic" />
+    </div>
 
     <div class="section contact-info">
-      <h2>Contact</h2>
-      <p>📞 +91 81097 15561</p>
-      <p>📧 <a href="mailto:udit.dnsharma@gmail.com">udit.dnsharma@gmail.com</a></p>
-      <p>📍Bengaluru, Karnataka (From Nalkheda, Madhya Pradesh) </p>
-      <p>🔗 <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">LinkedIn Profile</a></p>
-      <p>💻 <a href="https://github.com/sharmaji99" target="_blank">GitHub: sharmaji99</a></p>
+      <h2>📞 Contact</h2>
+      <p>Phone: +91 81097 15561</p>
+      <p>Email: <a href="mailto:udit.dnsharma@gmail.com">udit.dnsharma@gmail.com</a></p>
+      <p>Location: Bengaluru, Karnataka (From Nalkheda, Madhya Pradesh)</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">Visit Profile</a></p>
+      <p>GitHub: <a href="https://github.com/sharmaji99" target="_blank">sharmaji99</a></p>
     </div>
 
     <div class="section">
-      <h2>Personal Profile</h2>
-      <p>
-        Software Engineer with over two years of experience in designing, developing, testing, and maintaining robust web applications.
-        Adept at solving complex technical challenges and delivering high-quality, scalable solutions. Passionate about utilizing my technical
-        expertise and problem-solving skills to drive innovation and contribute effectively within a dynamic software development team.
-      </p>
-    </div>
+  <h2>👤 Personal Profile</h2>
+  <p>
+    I am a passionate and performance-driven <strong>Software Developer</strong> with over <strong>2 years of experience</strong> building scalable and secure web applications. I specialize in <strong>.NET Core, RESTful APIs, Entity Framework,</strong> and backend systems for enterprise solutions. At <strong>Atyati Technologies</strong>, I’ve led and contributed to mission-critical projects for financial institutions like <strong>IDBI Bank</strong>, delivering reliable MFI loan services and data-driven modules such as CCR reporting.
+  </p>
+  <p>
+    My strength lies in <strong>problem-solving, clean code architecture</strong>, and <strong>effective collaboration</strong> with cross-functional teams. I’ve demonstrated my ability to learn fast, take ownership, and innovate under pressure—recognized with the <strong>Rising Star Performer</strong> award in Q4 2023–2024.
+  </p>
+  <p>
+    With a solid academic foundation from <strong>NIT Patna</strong> and hands-on experience across <strong>ASP.NET, SQL Server, JWT, encryption techniques,</strong> and deployment on <strong>IIS</strong>, I am eager to contribute to meaningful software projects that make an impact. I am continuously refining my craft, staying up to date with modern design patterns and development practices.
+  </p>
+</div>
+
 
     <div class="section">
-      <h2>Work Experience</h2>
+      <h2>💼 Work Experience</h2>
       <p class="job-title">Software Developer | Atyati Technologies, Bangalore <br> (July 2023 - Present)</p>
       <ul>
         <li>Engineered .NET Core applications to optimize MFI loan services for IDBI Bank.</li>
@@ -128,7 +202,7 @@
         <li>Deployed applications on IIS ensuring reliable service delivery.</li>
       </ul>
 
-      <p class="job-title">Intern (Software Development) | Atyati Technologies, Bangalore <br> (Jan 2023 - June 2023)</p>
+      <p class="job-title">Intern (Software Development) | Atyati Technologies <br> (Jan 2023 - June 2023)</p>
       <ul>
         <li>Learned to implement middleware for logging, error handling, and validation.</li>
         <li>Built RESTful APIs following industry best practices.</li>
@@ -138,7 +212,7 @@
     </div>
 
     <div class="section">
-      <h2>Education</h2>
+      <h2>🎓 Education</h2>
       <p class="institution">Master of Computer Application</p>
       <p>National Institute of Technology, Patna (2021 - 2023) — 7.64 CGPA</p>
 
@@ -150,7 +224,7 @@
     </div>
 
     <div class="section">
-      <h2>Skills</h2>
+      <h2>🛠️ Skills</h2>
       <div class="skills-grid">
         <div>
           <strong>Technologies:</strong>
@@ -188,15 +262,15 @@
     </div>
 
     <div class="section">
-      <h2>Communication</h2>
+      <h2>🗣️ Communication</h2>
       <p>English, Hindi</p>
     </div>
 
     <div class="section">
-      <h2>Achievements</h2>
+      <h2>🏆 Achievements</h2>
       <ul>
-        <li class="achievement">🏆 Rising Star Performer Award at Atyati Technologies (Q4 2023-2024).</li>
-        <li class="achievement">🏅 All India Rank 662 in NIMCET 2021.</li>
+        <li class="achievement">Rising Star Performer Award at Atyati Technologies (Q4 2023–2024).</li>
+        <li class="achievement">All India Rank 662 in NIMCET 2021.</li>
       </ul>
     </div>
 
@@ -207,8 +281,7 @@
 
   <script>
     function handlePrint() {
-      const confirmPrint = confirm("Do you want to print or save this resume?");
-      if (confirmPrint) {
+      if (confirm("Do you want to print or save this resume?")) {
         window.print();
       }
     }
