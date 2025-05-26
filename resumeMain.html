@@ -6,37 +6,51 @@
   <title>Udit Sharma - Resume</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background: #f4f4f4;
+      background-color: #f4f4f9;
       color: #333;
     }
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
-      background: #fff;
       padding: 20px;
+      background-color: #fff;
     }
     h1, h2, h3 {
       color: #2c3e50;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+    h1 {
+      font-size: 32px;
     }
     .section {
-      margin-bottom: 20px;
+      margin-top: 30px;
     }
-    .section ul {
-      padding-left: 20px;
+    .section p {
+      margin: 4px 0;
     }
-    .contact-info, .skills, .education, .achievements {
+    .contact-info a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .skills-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 10px;
     }
-    .section-title {
-      font-size: 18px;
+    ul {
+      padding-left: 20px;
+    }
+    .job-title {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .institution {
+      font-weight: bold;
+    }
+    .achievement {
       margin-bottom: 5px;
     }
   </style>
@@ -47,16 +61,15 @@
     <p><strong>Software Developer</strong></p>
 
     <div class="section">
-  <h2>Contact</h2>
-  <div class="contact-info">
-    <p><strong>Phone:</strong> +91 81097 15561</p>
-    <p><strong>Email:</strong> udit.dnsharma@gmail.com</p>
-    <p><strong>Address:</strong> Nalkheda, Madhya Pradesh</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">udit-sharma</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/sharmaji99" target="_blank">sharmaji99</a></p>
-  </div>
-</div>
-
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> +91 81097 15561</p>
+        <p><strong>Email:</strong> udit.dnsharma@gmail.com</p>
+        <p><strong>Location:</strong> Nalkheda, Madhya Pradesh</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">udit-sharma</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/sharmaji99" target="_blank">sharmaji99</a></p>
+      </div>
+    </div>
 
     <div class="section">
       <h2>Personal Profile</h2>
@@ -64,70 +77,65 @@
     </div>
 
     <div class="section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <strong>Technologies and Skills</strong><br />
+          .NET Core, Web API, REST API, Entity Framework
+        </div>
+        <div>
+          <strong>Frameworks and Tools</strong><br />
+          ASP.NET, ADO.NET, SQL Server, Visual Studio
+        </div>
+        <div>
+          <strong>Languages</strong><br />
+          C#, C++, JavaScript, Bootstrap5, HTML, CSS
+        </div>
+        <div>
+          <strong>Design & Deployment</strong><br />
+          Design Patterns (Singleton, Factory), IIS Deployment
+        </div>
+        <div>
+          <strong>Communication</strong><br />
+          English, Hindi
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
       <h2>Work Experience</h2>
-      <h3>Software Developer, Atyati Technologies, Bangalore (July 2023 - Present)</h3>
+      <p class="job-title">Software Developer – Atyati Technologies, Bangalore (July 2023 - Current)</p>
       <ul>
-        <li>Engineered .NET Core applications to optimize MFI loan services for IDBI Bank.</li>
+        <li>Engineered .NET Core applications to optimize MFI loan services for IDBI Bank, ensuring efficient and scalable solutions.</li>
         <li>Developed and consumed Web APIs for seamless data integration.</li>
-        <li>Handled API-driven retrieval of CCR reports for streamlined financial processing.</li>
-        <li>Implemented factory pattern for code maintainability.</li>
+        <li>Handled API-driven CCR report retrieval, streamlining financial data processing.</li>
+        <li>Used factory pattern to enhance maintainability and scalability.</li>
         <li>Integrated JWT authentication for secure API communication.</li>
-        <li>Applied encryption for sensitive data protection.</li>
-        <li>Worked with technologies like Entity Framework Core, ASP.NET Core, SQL Server, RESTful APIs, MVC, C#, JavaScript, HTML, CSS.</li>
-        <li>Deployed application on IIS for optimized hosting.</li>
+        <li>Implemented encryption for securing sensitive data.</li>
+        <li>Used Entity Framework Core, ASP.NET Core, SQL Server, MVC, C#, JavaScript, HTML, and CSS.</li>
+        <li>Deployed applications using IIS for reliable availability.</li>
       </ul>
 
-      <h3>Intern, Atyati Technologies, Bangalore (Jan 2023 - June 2023)</h3>
+      <p class="job-title">Intern (Software Development) – Atyati Technologies, Bangalore (Jan 2023 - June 2023)</p>
       <ul>
-        <li>Implemented middleware in ASP.NET Core for logging and exception handling.</li>
-        <li>Gained strong understanding of RESTful API principles.</li>
-        <li>Worked with connection pooling and transaction management using MS SQL Server.</li>
-        <li>Used dependency injection to improve modularity and maintainability.</li>
+        <li>Implemented middleware in ASP.NET Core for logging, exception handling, and validation.</li>
+        <li>Understood RESTful API principles and design practices.</li>
+        <li>Learned connection pooling and transaction management in SQL Server.</li>
+        <li>Worked with dependency injection to improve modularity and maintainability.</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Education</h2>
-      <div class="education">
-        <p><strong>Master of Computer Application</strong><br/>NIT Patna (2021 - 2023)<br/>CGPA: 7.64</p>
-        <p><strong>B.Sc. in Computer Science</strong><br/>Christian Eminent College, Indore (2017 - 2020)<br/>Percentage: 72.97%</p>
-        <p><strong>Higher Secondary</strong><br/>Kamla Sagar Higher School, Bhainsoda (2016 - 2017)<br/>Percentage: 79.40%</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div>
-          <p class="section-title">Technologies</p>
-          <ul>
-            <li>.NET Core, ASP.NET, ADO.NET</li>
-            <li>Entity Framework, SQL Server</li>
-            <li>REST API, Web API</li>
-          </ul>
-        </div>
-        <div>
-          <p class="section-title">Programming & Tools</p>
-          <ul>
-            <li>C#, C++, JavaScript, HTML, CSS, Bootstrap 5</li>
-            <li>Visual Studio, IIS</li>
-            <li>Design Patterns: Singleton, Factory</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Communication</h2>
-      <p>English, Hindi</p>
+      <p><span class="institution">Master of Computer Application</span> – National Institute of Technology, Patna (2021–2023) – 7.64 CGPA</p>
+      <p><span class="institution">Bachelor of Science in Computer Science</span> – Christian Eminent College, Indore (2017–2020) – 72.97%</p>
+      <p><span class="institution">High School Diploma</span> – Kamla Sagar Higher School, Bhainsoda (2016–2017) – 79.40%</p>
     </div>
 
     <div class="section">
       <h2>Achievements</h2>
-      <div class="achievements">
-        <p><strong>Rising Star Award</strong><br/>Received the Rising Star Performer Award at Atyati Technologies (Q4 2023-2024)</p>
-        <p><strong>NIMCET Rank</strong><br/>All India Rank 662 in NIMCET Entrance Exam 2021</p>
-      </div>
+      <p class="achievement">🏆 Received the Rising Star Performer Award at Atyati Technologies in Q4 2023–2024.</p>
+      <p class="achievement">📈 Secured All India Rank 662 in NIMCET Entrance Exam 2021.</p>
     </div>
   </div>
 </body>
