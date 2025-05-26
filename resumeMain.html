@@ -9,7 +9,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
+      background-color: #fbfbfd;
       color: #333;
     }
     .container {
@@ -18,6 +18,7 @@
       padding: 20px;
       background-color: #fff;
       position: relative;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h1, h2, h3 {
       color: #2c3e50;
@@ -56,14 +57,36 @@
     }
     .profile-pic {
       position: absolute;
-    top: 80px;
-    right: 86px;
-    width: 154px;
-    height: 154px;
-    border-radius: 50%;
-    object-fit: fit;
-    border: 3px solid #2c3e50;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      top: 80px;
+      right: 86px;
+      width: 154px;
+      height: 154px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #2c3e50;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .print-btn-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .print-btn {
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .print-btn:hover {
+      background-color: #34495e;
+    }
+
+    @media print {
+      .print-btn-container {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -77,7 +100,7 @@
       <h2>Contact</h2>
       <p>📞 +91 81097 15561</p>
       <p>📧 <a href="mailto:udit.dnsharma@gmail.com">udit.dnsharma@gmail.com</a></p>
-      <p>📍 Nalkheda, Madhya Pradesh</p>
+      <p>📍Bengaluru, Karnataka (From Nalkheda, Madhya Pradesh) </p>
       <p>🔗 <a href="https://www.linkedin.com/in/udit-sharma-6604ab121" target="_blank">LinkedIn Profile</a></p>
       <p>💻 <a href="https://github.com/sharmaji99" target="_blank">GitHub: sharmaji99</a></p>
     </div>
@@ -176,6 +199,19 @@
         <li class="achievement">🏅 All India Rank 662 in NIMCET 2021.</li>
       </ul>
     </div>
+
+    <div class="print-btn-container">
+      <button class="print-btn" onclick="handlePrint()">🖨️ Print or Save</button>
+    </div>
   </div>
+
+  <script>
+    function handlePrint() {
+      const confirmPrint = confirm("Do you want to print or save this resume?");
+      if (confirmPrint) {
+        window.print();
+      }
+    }
+  </script>
 </body>
 </html>
