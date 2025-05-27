@@ -1,6 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "reaumeMain.html", "use": "@vercel/static" }
+    { "src": "resumeMain.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/resumeMain.html" }
   ]
 }
